@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "441812918134",
+    "firebase_url": "https://myprojectassociate.firebaseio.com",
+    "project_id": "myprojectassociate",
+    "storage_bucket": "myprojectassociate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441812918134:android:1e5189101aeda366",
+        "android_client_info": {
+          "package_name": "com.example.nagarnai.thelastmileassociate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441812918134-k6926ebqqne8nictcudqbv80qq98vlot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDVukwVz8l4KD9FEXWaIdouPTxDmY-Rno"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
