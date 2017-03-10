@@ -9,11 +9,16 @@
     android:paddingTop="16dp"
     tools:context=".activity.finalActivities.OrderActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Order id 101" />
+
     <ListView
         android:id="@+id/orders_lv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </ListView>
+        android:layout_height="0dp"/>
 
 </LinearLayout>
