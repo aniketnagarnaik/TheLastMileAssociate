@@ -6,9 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
 
-import com.example.nagarnai.thelastmileassociate.R;
+import com.example.nagarnai.thelastmileassociate.model.OrderDetails;
+import com.example.nagarnai.thelastmileassociate.utils.OrderAdapter;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -23,6 +26,7 @@ public class OrderActivity extends AppCompatActivity {
     private static final String TAG = "OrderActivity";
     private ListView listView;
     OkHttpClient client;
+    private AppCompatActivity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,10 @@ public class OrderActivity extends AppCompatActivity {
                 // UI elements
                 super.onPostExecute(httpResponse);
                 Log.d(httpResponse,"Success");
+                List<OrderDetails> orders = new ArrayList<OrderDetails>();
+                OrderAdapter orderAdapter = new OrderAdapter(activity, R.id.order, orders);
+                listView.setAdapter(orderAdapter);
+                listView.invalidate();
             }
 
             @Override
