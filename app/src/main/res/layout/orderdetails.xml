@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     android:paddingBottom="16dp"
     android:orientation="vertical"
     android:paddingLeft="64dp"
@@ -10,15 +11,25 @@
     tools:context=".activity.finalActivities.OrderActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:id="@+id/orderId_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAlignment="center"
         android:text="Order id 101" />
 
-    <ListView
-        android:id="@+id/orders_lv"
+    <TextView
+        android:id="@+id/orderId_2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"/>
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:text="Order id 102" />
+
+    <TextView
+        android:id="@+id/orderId_3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:text="Order id 103" />
+
 
 </LinearLayout>

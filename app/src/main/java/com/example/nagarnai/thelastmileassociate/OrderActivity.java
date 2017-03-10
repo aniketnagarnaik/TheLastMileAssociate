@@ -7,8 +7,12 @@ import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+import com.example.nagarnai.thelastmileassociate.event.OrderResultOnMainEvent;
 import com.example.nagarnai.thelastmileassociate.model.OrderDetails;
+import com.example.nagarnai.thelastmileassociate.utils.JSONParser;
 import com.example.nagarnai.thelastmileassociate.utils.OrderAdapter;
+
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -39,7 +43,6 @@ public class OrderActivity extends AppCompatActivity {
 
         client = new OkHttpClient();
 
-        listView = (ListView)findViewById(R.id.orders_lv);
         activity = this;
 
     }
@@ -60,12 +63,13 @@ public class OrderActivity extends AppCompatActivity {
                 // UI elements
                 super.onPostExecute(httpResponse);
                 Log.d(httpResponse,"Success");
-                List<OrderDetails> orders = new ArrayList<OrderDetails>();
-                OrderAdapter orderAdapter = new OrderAdapter(activity, R.id.orderId, orders);
-                listView.setAdapter(orderAdapter);
-                listView.invalidate();
 
-                Log.d(TAG,"Success");
+                OrderDetails oD1 = new OrderDetails("101","13.071028","77.567969");
+                OrderDetails od2 = new OrderDetails("102","13.071613","77.563356");
+                List<OrderDetails> orders = new ArrayList<OrderDetails>();
+                orders.add(oD1);
+                orders.add(od2);
+
                 setContentView(R.layout.orderdetails);
 
             }
@@ -91,6 +95,7 @@ public class OrderActivity extends AppCompatActivity {
                 try {
                     response = client.newCall(request).execute();
                     Log.d("Response", response.toString());
+
                     String strResponse = response.body().string();
                     Log.d(TAG, "Got response" + strResponse);
 

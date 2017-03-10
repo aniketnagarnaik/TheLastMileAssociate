@@ -16,11 +16,10 @@ public class OrderDetails {
 
     }
 
-    public OrderDetails(String orderId, String latitude, String longitude, Address address) {
+    public OrderDetails(String orderId, String latitude, String longitude) {
         this.orderId = orderId;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.address = address;
     }
 
     public String getOrderId() {

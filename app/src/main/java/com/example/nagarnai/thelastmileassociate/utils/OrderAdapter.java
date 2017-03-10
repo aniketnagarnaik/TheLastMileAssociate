@@ -2,6 +2,7 @@ package com.example.nagarnai.thelastmileassociate.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,7 @@ public class OrderAdapter extends ArrayAdapter<OrderDetails> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
         OrderHolder holder = null;
+        Log.i("tarunkg", "rendering view");
 
         if(row == null) {
             LayoutInflater inflater = ((Activity)context).getLayoutInflater();
